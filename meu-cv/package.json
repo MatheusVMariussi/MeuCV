@@ -2,7 +2,7 @@
   "name": "meu-cv",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://matheusvmariussi.github.io/MeuCV",
+  "homepage": "https://matheusmariussi.com.br",
   "type": "module",
   "scripts": {
     "dev": "vite",
