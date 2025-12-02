@@ -1,19 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const FooterContainer = styled.footer`
-  background-color: #1c1c1c;
-  color: #888;
-  text-align: center;
-  padding: 1.5rem;
-  border-top: 1px solid #444;
-`;
 
 const Footer = () => {
   return (
-    <FooterContainer>
-      <p>© 2025 Matheus Vinicius Mariussi. Todos os direitos reservados.</p>
-    </FooterContainer>
+    <footer className="py-8 border-t border-neutral-800 bg-black text-center">
+      <p className="text-neutral-500 text-sm">
+        © {new Date().getFullYear()} Matheus Vinicius Mariussi. 
+        <br className="md:hidden"/> Feito com React, Tailwind & Aceternity.
+      </p>
+    </footer>
   );
 };
 

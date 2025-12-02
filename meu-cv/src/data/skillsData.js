@@ -1,6 +1,7 @@
 export const skills = {
-  languages: ["Python", "JavaScript/TypeScript", "Java", "C", "SQL"],
+  languages: ["Python", "JavaScript/TypeScript", "C", "SQL"],
   webAndMobile: ["React", "React Native", "Node.js", "Express", "HTML5", "CSS3"],
   databases: ["MySQL", "Firebase (Firestore)"],
-  tools: ["Git", "GitHub", "Gradle", "Docker (Básico)", "Azure (Em aprendizado)"]
+  ia: ["TensorFlow", "Keras", "PyTorch", "LangChain", "Computer Vision"],
+  tools: ["Git", "GitHub", "GitHub Actions", "Azure DevOps"]
 };

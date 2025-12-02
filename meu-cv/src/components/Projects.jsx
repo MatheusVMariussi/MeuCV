@@ -1,43 +1,26 @@
-import React from 'react';
-import styled from 'styled-components';
-import { projects } from '../data/projectsData';
-import ProjectCard from './ProjectCard.jsx';
-
-// --- Nossos Componentes Estilizados ---
-
-const ProjectsSection = styled.section`
-  padding: 60px 20px;
-  background-color: #1c1c1c; /* Um fundo quase preto para a seção */
-  text-align: center;
-
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-  }
-`;
-
-const ProjectsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: left; /* Alinha o texto dentro dos cards à esquerda */
-`;
-
-
-// --- Nosso Componente React ---
+import React from "react";
+import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
+import { projects } from "../data/projectsData";
+import { FaCode } from "react-icons/fa";
 
 const Projects = () => {
   return (
-    <ProjectsSection id="projects">
-      <h2>Meus Projetos</h2>
-      <ProjectsGrid>
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+    <section id="projetos" className="py-20 bg-black">
+      <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-12">Meus Projetos</h2>
+      <BentoGrid className="max-w-4xl mx-auto">
+        {projects.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description[0]}
+            header={<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-900 to-neutral-800" />}
+            icon={<FaCode className="h-4 w-4 text-neutral-500" />}
+            link={item.githubLink}
+            className={i === 0 || i === 3 ? "md:col-span-2" : ""}
+          />
         ))}
-      </ProjectsGrid>
-    </ProjectsSection>
+      </BentoGrid>
+    </section>
   );
 };
 

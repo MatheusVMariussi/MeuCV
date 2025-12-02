@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: "Análise de Redes Complexas de Streaming",
-    technologies: ["C", "Python", "Estrutura de Dados", "Grafos"],
+    technologies: ["Python", "Estrutura de Dados", "Grafos"],
     description: [
       "Análise de um dataset com +80 mil entidades para mapear colaborações em plataformas de streaming.",
       "Desenvolvimento do zero (sem bibliotecas externas) de estruturas de grafos ponderados.",
