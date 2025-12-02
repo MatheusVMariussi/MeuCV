@@ -1,7 +1,38 @@
 export const skills = {
-  languages: ["Python", "JavaScript/TypeScript", "C", "SQL"],
-  webAndMobile: ["React", "React Native", "Node.js", "Express", "HTML5", "CSS3"],
-  databases: ["MySQL", "Firebase (Firestore)"],
-  ia: ["TensorFlow", "Keras", "PyTorch", "LangChain", "Computer Vision"],
-  tools: ["Git", "GitHub", "GitHub Actions", "Azure DevOps"]
+  languages: [
+    "Python",
+    "TypeScript",
+    "JavaScript",
+    "C",
+    "SQL",
+  ],
+  webAndMobile: [
+    "React Native (Expo)",
+    "React.js",
+    "Node.js",
+    "Tailwind CSS",
+    "Reanimated",
+    "Framer Motion"
+  ],
+  ia: [
+    "PyTorch",
+    "LangChain (Agents)",
+    "LLMs (Ollama)",
+    "Computer Vision",
+    "Genetic Algorithms",
+    "Data Science (Pandas)"
+  ],
+  databases: [
+    "Firebase (Full Suite)",
+    "Cloud Functions",
+    "MySQL",
+    "Modelagem Relacional",
+    "API RESTful"
+  ],
+  tools: [
+    "Git & GitHub",
+    "Azure DevOps",
+    "Estrutura de Dados",
+    "Grafos",
+  ]
 };

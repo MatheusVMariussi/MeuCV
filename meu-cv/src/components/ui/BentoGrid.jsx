@@ -1,33 +1,106 @@
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { cn } from "../../utils/cn";
+import { FaGithub, FaApple, FaGooglePlay } from "react-icons/fa";
 
 export const BentoGrid = ({ className, children }) => {
   return (
-    <div className={cn("grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ", className)}>
+    <div className={cn("grid md:auto-rows-[22rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ", className)}>
       {children}
     </div>
   );
 };
 
-export const BentoGridItem = ({ className, title, description, header, icon, link }) => {
+export const BentoGridItem = ({
+  className,
+  title,
+  description,
+  header,
+  icon,
+  github,
+  appStore,
+  googlePlay,
+}) => {
+  // Estado local para saber se o mouse está em cima
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div
       className={cn(
-        "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4",
+        "row-span-1 rounded-xl group/bento shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 overflow-hidden relative z-10",
         className
       )}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      {header}
-      <div className="group-hover/bento:translate-x-2 transition duration-200">
+      {/* HEADER ANIMADO (Framer Motion)
+        Anima a altura exata de 100% para algo menor, dando espaço ao texto.
+      */}
+      <motion.div
+        animate={{
+          flexBasis: isHovered ? "20%" : "50%", // Header encolhe
+          marginBottom: isHovered ? "0.5rem" : "1rem",
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="w-full rounded-xl overflow-hidden relative"
+      >
+        {header}
+      </motion.div>
+
+      <div className="flex flex-col flex-grow transition duration-200 group-hover/bento:translate-x-2">
         {icon}
+        
         <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
           {title}
         </div>
-        <div className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300">
-          {description}
+
+        {/* DESCRIÇÃO EXPANSÍVEL (Framer Motion) 
+          A mágica acontece aqui: 'height: "auto"' permite que o Framer calcule
+          exatamente o tamanho da lista, não importa se tem 3 ou 10 linhas.
+        */}
+        <motion.div
+          initial={false}
+          animate={{
+            height: isHovered ? "auto" : "3.5rem", // Altura padrão vs Altura total
+            opacity: 1
+          }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300 overflow-hidden"
+        >
+          {/* Scroll suave se o texto for MUITO grande mesmo expandido */}
+          <div className="max-h-[160px] overflow-y-auto custom-scrollbar pr-2">
+            {Array.isArray(description) ? (
+              <ul className="list-disc list-inside space-y-1 pb-2">
+                {description.map((item, idx) => (
+                  <li key={idx} className={idx === 0 ? "text-neutral-300 font-medium" : "text-neutral-400"}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              description
+            )}
+          </div>
+        </motion.div>
+
+        {/* Links (Sempre visíveis, mas empurrados para baixo suavemente) */}
+        <div className="flex gap-3 mt-auto pt-4">
+          {github && (
+            <a href={github} target="_blank" rel="noreferrer" className="flex items-center gap-1 text-neutral-500 hover:text-white transition-colors text-xs border border-neutral-700 rounded px-2 py-1 z-20 cursor-pointer">
+              <FaGithub /> Code
+            </a>
+          )}
+          {appStore && (
+            <a href={appStore} target="_blank" rel="noreferrer" className="flex items-center gap-1 text-neutral-500 hover:text-blue-400 transition-colors text-xs border border-neutral-700 rounded px-2 py-1 z-20 cursor-pointer">
+              <FaApple /> App Store
+            </a>
+          )}
+          {googlePlay && (
+            <a href={googlePlay} target="_blank" rel="noreferrer" className="flex items-center gap-1 text-neutral-500 hover:text-green-400 transition-colors text-xs border border-neutral-700 rounded px-2 py-1 z-20 cursor-pointer">
+              <FaGooglePlay /> Google Play
+            </a>
+          )}
         </div>
-        {link && (
-            <a href={link} target="_blank" className="text-blue-500 text-xs mt-2 block hover:underline">Ver no GitHub</a>
-        )}
       </div>
     </div>
   );
