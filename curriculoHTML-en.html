@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Matheus Vinicius Mariussi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --sidebar-bg: #1f2937;
+            --text-dark: #222222;
+            --text-light: #555555;
+            --text-white: #ffffff;
+            --sidebar-width: 33%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: var(--text-dark);
+            line-height: 1.35; /* Espaçamento de linha mais confortável */
+            font-size: 14.5px; /* Fonte aumentada para preencher melhor */
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+            display: flex;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* --- Coluna Esquerda (Principal) --- */
+        .main-content {
+            flex: 1;
+            padding: 40px 35px; /* Mais respiro nas bordas */
+        }
+
+        header { margin-bottom: 35px; }
+
+        h1 {
+            font-size: 2.4rem; /* Nome maior e mais imponente */
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .header-link {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .contact-info i {
+            margin-right: 8px;
+            color: var(--text-light);
+        }
+        
+        .contact-info a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        section { margin-bottom: 30px; } /* Mais espaço entre seções */
+
+        h2.section-title {
+            font-size: 1.15rem;
+            letter-spacing: 1.5px;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .item { margin-bottom: 20px; }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .item-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .item-date, .item-location {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .company-name {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        ul.details-list {
+            list-style-type: disc;
+            padding-left: 18px;
+        }
+
+        ul.details-list li {
+            margin-bottom: 5px; /* Itens da lista respirando melhor */
+            color: var(--text-dark);
+        }
+        
+        .project-tech {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        /* --- Coluna Direita (Barra Lateral) --- */
+        .sidebar {
+            width: var(--sidebar-width);
+            background-color: var(--sidebar-bg);
+            color: var(--text-white);
+            padding: 40px 25px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 135px; /* Foto aumentada */
+            height: 135px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid rgba(255,255,255,0.1);
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sidebar h2.section-title {
+            color: var(--text-white);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 8px;
+            margin-bottom: 18px;
+        }
+
+        .summary-text {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            opacity: 0.95;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .lang-name { font-size: 0.95rem; font-weight: 600; }
+        
+        .lang-level-container { display: flex; align-items: center; }
+
+        .lang-level-text {
+            font-size: 0.8rem;
+            margin-right: 10px;
+            opacity: 0.8;
+        }
+
+        .dots { display: flex; gap: 4px; }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+            background-color: rgba(255,255,255,0.3);
+            border-radius: 50%;
+        }
+
+        .dot.filled { background-color: var(--text-white); }
+
+        .skill-category { margin-bottom: 20px; }
+
+        .skill-category h3 {
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #93c5fd; 
+        }
+
+        .skill-list {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+        
+        .skill-separator { margin: 0 3px; opacity: 0.5; }
+
+        /* --- BOTÃO DE DOWNLOAD --- */
+        .btn-download-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .btn-download {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* --- AJUSTES PARA IMPRESSÃO (PDF) --- */
+        @media print {
+            @page {
+                margin: 0;
+                size: A4;
+            }
+            body {
+                padding: 0;
+                background-color: white;
+            }
+            .container {
+                width: 100%;
+                max-width: none;
+                box-shadow: none;
+                margin: 0;
+                min-height: 297mm;
+                height: 100vh;
+            }
+            .main-content, .sidebar {
+                height: 100%; /* Força as colunas a ocuparem a altura total */
+            }
+            .btn-download-container { display: none !important; }
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="btn-download-container">
+        <button class="btn-download" onclick="window.print()">
+            <i class="fa-solid fa-file-pdf"></i> Save as PDF
+        </button>
+    </div>
+
+<div class="container">
+    <main class="main-content">
+        <header>
+            <h1>MATHEUS VINICIUS MARIUSSI</h1>
+            <a href="https://matheusmariussi.com.br" target="_blank" class="header-link">matheusmariussi.com.br</a>
+            <div class="contact-info">
+                <p><i class="fa-solid fa-envelope"></i> matheus.mariussi@pucpr.edu.br</p>
+                <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/matheus-vinicius-mariussi-a32706150/">LinkedIn</a></p>
+                <p><i class="fa-solid fa-location-dot"></i> Curitiba, Brazil</p>
+            </div>
+        </header>
+
+        <section id="experience">
+            <h2 class="section-title">EXPERIENCE</h2>
+            <div class="item">
+                <div class="item-header">
+                    <h3 class="item-title">Full-Stack Developer</h3>
+                    <span class="item-date">10/2025 - Present</span>
+                </div>
+                <span class="company-name">E-AWARE</span>
+                <ul class="details-list">
+                    <li>Development of cross-platform mobile applications (iOS/Android) using React Native and Expo.</li>
+                    <li>Implementation of responsive interfaces and integration with RESTful APIs and IoT devices.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">PROJECTS</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <h3 class="item-title">OceanTowersApp</h3>
+                </div>
+                <p class="project-tech">React Native, Expo, Cloud Functions, Node.js</p>
+                <ul class="details-list">
+                    <li>App Store application for real-time bar and order management.</li>
+                    <li>Payment orchestration (Pix/Card) and real-time synchronization.</li>
+                    <li>Includes web administrative dashboard (React + Vite).</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <h3 class="item-title">matheusmariussi.com.br</h3>
+                </div>
+                <p class="project-tech">React, Tailwind, Framer Motion, Aceternity UI</p>
+                <ul class="details-list">
+                    <li>High-performance web platform for project showcasing.</li>
+                    <li>Internationalization (PT/EN), Design System, and extreme optimization.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <h3 class="item-title">Deep Learning Framework (FER)</h3>
+                </div>
+                <p class="project-tech">Python, PyTorch, Pandas, Scikit-learn</p>
+                <ul class="details-list">
+                    <li>Modular framework for training/evaluating Facial Emotion Recognition models.</li>
+                    <li>Advanced pipelines such as Test-Time Augmentation (TTA) and ensembles.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 class="section-title">EDUCATION</h2>
+            <div class="item">
+                <div class="item-header">
+                    <h3 class="item-title">Bachelor of Computer Science</h3>
+                    <span class="item-date">12/2026</span>
+                </div>
+                <span class="company-name">Pontifícia Universidade Católica do Paraná (PUCPR)</span>
+            </div>
+        </section>
+    </main>
+
+    <aside class="sidebar">
+        <div class="profile-container">
+            <div class="profile-img">
+                <img src="perfil.jpeg" alt="Profile Picture">
+            </div>
+        </div>
+
+        <section id="summary">
+            <h2 class="section-title">SUMMARY</h2>
+            <p class="summary-text">
+                Computer Science undergraduate. Full-stack focused on React Native, Firebase, and Node.js. Passionate about AI and computer vision.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">SKILLS</h2>
+            
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <p class="skill-list">Python <span class="skill-separator">·</span> TypeScript <span class="skill-separator">·</span> JS <span class="skill-separator">·</span> C <span class="skill-separator"></span> SQL</p>
+            </div>
+
+            <div class="skill-category">
+                <h3>Web & Mobile</h3>
+                <p class="skill-list">React Native <span class="skill-separator">·</span> Expo <span class="skill-separator">·</span> React <span class="skill-separator">·</span> Node <span class="skill-separator">·</span> Tailwind <span class="skill-separator">·</span> Reanimated</p>
+            </div>
+
+            <div class="skill-category">
+                <h3>Databases</h3>
+                <p class="skill-list">Firebase <span class="skill-separator">·</span> Cloud Functions <span class="skill-separator">·</span> MySQL <span class="skill-separator">·</span> REST APIs</p>
+            </div>
+
+            <div class="skill-category">
+                <h3>Artificial Intelligence</h3>
+                <p class="skill-list">PyTorch <span class="skill-separator">·</span> LangChain <span class="skill-separator">·</span> LLMs <span class="skill-separator"></span> Ollama <span class="skill-separator">·</span> Computer Vision <span class="skill-separator">·</span> Data Science</p>
+            </div>
+
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <p class="skill-list">Git <span class="skill-separator">·</span> GitHub <span class="skill-separator">·</span> Azure DevOps <span class="skill-separator"></span> Graphs <span class="skill-separator">·</span> Data structures</p>
+            </div>
+        </section>
+
+        <section id="languages">
+            <h2 class="section-title">LANGUAGES</h2>
+            <div class="language-item">
+                <span class="lang-name">Portuguese</span>
+                <div class="lang-level-container">
+                    <span class="lang-level-text">Native</span>
+                    <div class="dots">
+                        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="language-item">
+                <span class="lang-name">English</span>
+                <div class="lang-level-container">
+                    <span class="lang-level-text">Proficient</span>
+                    <div class="dots">
+                        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </aside>
+</div>
+
+</body>
+</html>
