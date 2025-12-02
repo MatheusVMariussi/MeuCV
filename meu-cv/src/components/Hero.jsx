@@ -1,10 +1,22 @@
 import React from "react";
 import { BackgroundBeams } from "./ui/BackgroundBeams";
-import { FaGithub, FaLinkedin, FaInstagram, FaFileDownload } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFileDownload, FaInstagram } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  // Lógica para selecionar o arquivo correto
+  // Verifica se o idioma começa com 'en' (para cobrir en-US, en-GB, etc.)
+  const isEnglish = i18n.language && i18n.language.startsWith('en');
+  
+  const cvFile = isEnglish 
+    ? "/MatheusMariussi_CV_EN.pdf" 
+    : "/MatheusMariussi_CV_PT.pdf";
+
+  const downloadName = isEnglish
+    ? "Matheus_Mariussi_CV_EN.pdf"
+    : "Matheus_Mariussi_CV_PT.pdf";
 
   return (
     <div className="min-h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased overflow-hidden pt-20">
@@ -19,7 +31,6 @@ const Hero = () => {
             alt="Matheus Mariussi" 
             className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-neutral-800 shadow-2xl"
             onError={(e) => { 
-              // Se a imagem sumir, abre o console (F12) para ver este erro
               console.error("Erro: Imagem /perfil.jpg não encontrada na pasta public");
               e.target.style.display = 'none'; 
             }} 
@@ -45,10 +56,10 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col md:flex-row items-center gap-4 relative z-10">
-            {/* CORREÇÃO DO BOTÃO AQUI 👇 */}
+            {/* BOTÃO DE DOWNLOAD DINÂMICO */}
             <a 
-              href="/MatheusMariussi_CVV.pdf" 
-              download="Matheus_Mariussi_CV.pdf"
+              href={cvFile} 
+              download={downloadName}
               className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold transition duration-200 shadow-[0_0_20px_rgba(37,99,235,0.5)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)]"
             >
               <FaFileDownload /> {t('hero.btn_cv')}
@@ -74,7 +85,7 @@ const Hero = () => {
               </a>
 
               <a 
-                 href="https://www.instagram.com/matheus.mariussi/"
+                 href="https://www.instagram.com/matheus.mariussi/" 
                  target="_blank" 
                  rel="noreferrer"
                  className="p-3 rounded-full border border-neutral-700 hover:bg-neutral-800 text-white transition hover:scale-110"
