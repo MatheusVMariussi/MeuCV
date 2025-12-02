@@ -1,0 +1,69 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "role": "Full-stack Developer",
+    "intro": "Mobile Full-stack Developer and AI enthusiast.",
+    "working_at": "Currently working at",
+    "btn_projects": "View Projects",
+    "btn_cv": "Download CV"
+  },
+  "experience": {
+    "title": "Professional Journey",
+    "jobs": {
+      "eaware": {
+        "title": "Full-stack Developer",
+        "desc_1": "Development of cross-platform mobile applications (iOS/Android) using React Native.",
+        "desc_2": "Creation of responsive interfaces and integration with RESTful APIs.",
+        "desc_3": "Integration of WiFi functionalities and direct connection with IoT devices."
+      },
+      "puc": {
+        "title": "Bachelor of Computer Science",
+        "desc_1": "Academic focus on Computer Vision, Machine Learning, and Data Structures."
+      }
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "ocean": {
+      "desc": "Full-stack Ecosystem (Mobile & Web) for bar management published on the App Store. Mobile App with Expo Router, Reanimated, and Context API. Serverless Backend with Firebase Cloud Functions."
+    },
+    "mcp": {
+      "desc": "'Local-First' voice-controlled smart assistant. ReAct architecture with LangChain and Ollama to interpret commands and manipulate spreadsheets."
+    },
+    "fer": {
+      "desc": "Modular framework for training Facial Emotion Recognition models. Support for multiple datasets and backbones (ResNet, DenseNet)."
+    },
+    "genetic": {
+      "desc": "Genetic Algorithm 'from scratch' for Feature Selection. Adaptive Mutation and Elitism to maximize accuracy (93.86% with 80% feature reduction)."
+    },
+    "skins": {
+      "desc": "Full-stack platform for trading digital assets (CS2 Skins). RESTful Backend in Node.js with JWT authentication and complex SQL modeling."
+    },
+    "minimax": {
+      "desc": "Competitive autonomous agents (Tic-Tac-Toe 5x5). Comparative analysis between standard Minimax and Alpha-Beta Pruning with exponential node reduction."
+    },
+    "networks": {
+      "desc": "Mapping of streaming collaborations (+80k entities). Manual implementation of graph algorithms (MST, Centrality) focused on performance."
+    }
+  },
+  "skills": {
+    "title": "Technical Arsenal",
+    "languages": "Languages",
+    "web_mobile": "Web & Mobile",
+    "db": "Databases",
+    "tools": "Tools",
+    "ia": "Artificial Intelligence"
+  },
+  "contact": {
+    "title": "Got a proposal for me?",
+    "subtitle": "I'm always open to new opportunities and challenges. Feel free to contact me.",
+    "btn_email": "Send Email"
+  },
+  "footer": {
+    "text": "Built with React, Tailwind & Aceternity."
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "nav": {
+    "projects": "Projetos",
+    "skills": "Skills",
+    "contact": "Contato"
+  },
+  "hero": {
+    "role": "Desenvolvedor Full-stack",
+    "intro": "Desenvolvedor Full-stack mobile e entusiasta de IA.",
+    "working_at": "Atualmente trabalhando na",
+    "btn_projects": "Ver Projetos",
+    "btn_cv": "Baixar Currículo"
+  },
+  "experience": {
+    "title": "Jornada Profissional",
+    "jobs": {
+      "eaware": {
+        "title": "Desenvolvedor Full-stack",
+        "desc_1": "Desenvolvimento de aplicações mobile multiplataforma (iOS/Android) utilizando React Native.",
+        "desc_2": "Criação de interfaces responsivas e integração com APIs RESTful.",
+        "desc_3": "Integração de funcionalidades de wifi e conexão direta com dispositivos IoT."
+      },
+      "puc": {
+        "title": "Bacharelado em Ciência da Computação",
+        "desc_1": "Foco acadêmico em Visão Computacional, Machine Learning e Estrutura de Dados."
+      }
+    }
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "ocean": {
+      "desc": "Ecossistema Full-stack (Mobile & Web) para gestão de bares publicado na App Store. App Mobile com Expo Router, Reanimated e Context API. Backend Serverless com Firebase Cloud Functions."
+    },
+    "mcp": {
+      "desc": "Assistente inteligente 'Local-First' controlado por voz. Arquitetura ReAct com LangChain e Ollama para interpretar comandos e manipular planilhas."
+    },
+    "fer": {
+      "desc": "Framework modular para treinamento de modelos de Reconhecimento de Emoções Faciais. Suporte a múltiplos datasets e backbones (ResNet, DenseNet)."
+    },
+    "genetic": {
+      "desc": "Algoritmo Genético 'from scratch' para Feature Selection. Mutação Adaptativa e Elitismo para maximizar acurácia (93.86% com redução de 80% nas features)."
+    },
+    "skins": {
+      "desc": "Plataforma Full-stack para comércio de ativos digitais (Skins CS2). Backend RESTful em Node.js com autenticação JWT e modelagem SQL complexa."
+    },
+    "minimax": {
+      "desc": "Agentes autônomos competitivos (Tic-Tac-Toe 5x5). Análise comparativa entre Minimax padrão e Poda Alfa-Beta com redução exponencial de nós."
+    },
+    "networks": {
+      "desc": "Mapeamento de colaborações em streaming (+80 mil entidades). Implementação manual de algoritmos de grafos (MST, Centralidade) focada em performance."
+    }
+  },
+  "skills": {
+    "title": "Arsenal Técnico",
+    "languages": "Linguagens",
+    "web_mobile": "Web & Mobile",
+    "db": "Banco de Dados",
+    "tools": "Ferramentas",
+    "ia": "Inteligência Artificial"
+  },
+  "contact": {
+    "title": "Tem alguma proposta para mim?",
+    "subtitle": "Estou sempre aberto a novas oportunidades e desafios. Sinta-se à vontade para entrar em contato comigo.",
+    "btn_email": "Enviar Email"
+  },
+  "footer": {
+    "text": "Feito com React, Tailwind & Aceternity."
+  }
+}
