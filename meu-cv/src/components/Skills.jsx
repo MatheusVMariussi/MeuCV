@@ -1,8 +1,12 @@
 import React from 'react';
 import { skills } from '../data/skillsData';
+import { cn } from '../utils/cn';
 
-const SkillCard = ({ title, items }) => (
-  <div className="p-6 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-blue-500/50 transition-colors group">
+const SkillCard = ({ title, items, className }) => (
+  <div className={cn(
+    "p-6 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-blue-500/50 transition-colors group",
+    className
+  )}>
     <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
       {title}
     </h3>
@@ -21,7 +25,7 @@ const SkillCard = ({ title, items }) => (
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 relative overflow-hidden">
+    <section id="skills" className="py-20 relative overflow-hidden bg-black">
       <div className="max-w-5xl mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-16">
           Arsenal Técnico
@@ -31,8 +35,13 @@ const Skills = () => {
           <SkillCard title="Linguagens" items={skills.languages} />
           <SkillCard title="Web & Mobile" items={skills.webAndMobile} />
           <SkillCard title="Banco de Dados" items={skills.databases} />
-          <SkillCard title="IA" items={skills.ia} />
-          <SkillCard title="Ferramentas" items={skills.tools} />
+          <SkillCard title="ia" items={skills.ia} /> 
+
+          <SkillCard 
+            title="Ferramentas" 
+            items={skills.tools} 
+            className="md:col-span-2 md:w-1/2 md:mx-auto" 
+          />
         </div>
       </div>
     </section>
