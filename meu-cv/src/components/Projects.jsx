@@ -2,6 +2,13 @@ import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import { FaCode } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import mcp from "../assets/mcp.png";
+import ocean from "../assets/oceanTowersApp.png";
+import fer from "../assets/tcc-fer.png";
+import tictactoe from "../assets/tictactoe.png";
+import genetic from "../assets/genetic-algorithm.png";
+import skins from "../assets/minhasskins.png";
+import networks from "../assets/complex-networks.png";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -9,45 +16,45 @@ const Projects = () => {
   const projects = [
     {
       title: "OceanTowersApp",
-      description: [t('projects.ocean.desc')],
+      description: t('projects.ocean.desc', { returnObjects: true }),
       appStore: "https://apps.apple.com/br/app/ocean-towers/id6739984955",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1470&auto=format&fit=crop"
+      image: ocean
     },
     {
       title: "Assistente de Voz (MCP Agent)",
-      description: [t('projects.mcp.desc')],
+      description: t('projects.mcp.desc', { returnObjects: true }),
       github: "https://github.com/MatheusVMariussi/mcp-voice-agent",
-      image: "https://images.unsplash.com/photo-1589254065878-42c9da9e205b?q=80&w=1470&auto=format&fit=crop"
+      image: mcp
     },
     {
       title: "Framework FER",
-      description: [t('projects.fer.desc')],
+      description: t('projects.fer.desc', { returnObjects: true }),
       github: "https://github.com/MatheusVMariussi/TCC-FER",
-      image: "https://plus.unsplash.com/premium_photo-1682124651258-410b25fa9dc0?q=80&w=1471&auto=format&fit=crop"
+      image: fer
     },
     {
       title: "Algoritmo Genético",
-      description: [t('projects.genetic.desc')],
+      description: t('projects.genetic.desc', { returnObjects: true }),
       github: "https://github.com/MatheusVMariussi/TDE-Genetic-Algorithm",
-      image: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=1587&auto=format&fit=crop"
+      image: genetic
     },
     {
       title: "MinhasSkins Marketplace",
-      description: [t('projects.skins.desc')],
+      description: t('projects.skins.desc', { returnObjects: true }),
       github: "https://github.com/MatheusVMariussi/Cs2-SKINS",
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1470&auto=format&fit=crop"
+      image: skins
     },
     {
       title: "IA Invencível (Game Theory)",
-      description: [t('projects.minimax.desc')],
+      description: t('projects.minimax.desc', { returnObjects: true }),
       github: "https://github.com/MatheusVMariussi/TDE2-Minimax-AlphaBeta",
-      image: "https://images.unsplash.com/photo-1611195974226-a6a9be9dd763?q=80&w=1450&auto=format&fit=crop"
+      image: tictactoe
     },
     {
       title: "Análise de Redes Complexas",
-      description: [t('projects.networks.desc')],
+      description: t('projects.networks.desc', { returnObjects: true }),
       github: "https://github.com/MatheusVMariussi/TDE_Actuators",
-      image: "https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=1470&auto=format&fit=crop"
+      image: networks
     }
   ];
 

@@ -29,25 +29,55 @@
   "projects": {
     "title": "My Projects",
     "ocean": {
-      "desc": "Full-stack Ecosystem (Mobile & Web) for bar management published on the App Store. Mobile App with Expo Router, Reanimated, and Context API. Serverless Backend with Firebase Cloud Functions."
+      "desc": [
+        "Full-stack Ecosystem (Mobile & Web) for bar management published on the App Store.",
+        "Mobile App developed with Expo 54 and Expo Router, using Reanimated for fluid animations (60fps) and Context API.",
+        "Robust Serverless Backend with Firebase Cloud Functions orchestrating secure payments (Pix/Card) via Pagar.me.",
+        "Advanced features: Native QR Code scanning, theme persistence, and real-time synchronization via Firestore.",
+        "Web Administrative Panel (React + Vite) for complete menu management and live order monitoring."
+      ]
     },
     "mcp": {
-      "desc": "'Local-First' voice-controlled smart assistant. ReAct architecture with LangChain and Ollama to interpret commands and manipulate spreadsheets."
+      "desc": [
+        "Voice-controlled 'Local-First' smart assistant for complex task automation.",
+        "ReAct Agent Architecture with LangChain and Ollama (Mistral) to interpret voice commands and manipulate spreadsheets.",
+        "Custom data persistence and automated list formatting sent directly to WhatsApp."
+      ]
     },
     "fer": {
-      "desc": "Modular framework for training Facial Emotion Recognition models. Support for multiple datasets and backbones (ResNet, DenseNet)."
+      "desc": [
+        "Modular Deep Learning framework for training and evaluating Facial Emotion Recognition (FER) models.",
+        "Flexible architecture supporting multiple datasets (FER2013, RAF-DB, ExpW) and backbones (ResNet, DenseNet).",
+        "Implementation of advanced pipelines: Test-Time Augmentation (TTA) and automated statistical error analysis."
+      ]
     },
     "genetic": {
-      "desc": "Genetic Algorithm 'from scratch' for Feature Selection. Adaptive Mutation and Elitism to maximize accuracy (93.86% with 80% feature reduction)."
+      "desc": [
+        "'From scratch' implementation of a Genetic Algorithm (GA) for feature selection optimization on Breast Cancer dataset.",
+        "Adaptive Mutation and Elitism strategies to maximize KNN classifier accuracy.",
+        "Result: 93.86% accuracy using only 6 features (80% reduction in dimensionality), outperforming the baseline."
+      ]
     },
     "skins": {
-      "desc": "Full-stack platform for trading digital assets (CS2 Skins). RESTful Backend in Node.js with JWT authentication and complex SQL modeling."
+      "desc": [
+        "Robust Full-stack platform for trading digital assets (CS2 Skins), developed with MVC architecture.",
+        "RESTful Backend in Node.js/Express with JWT authentication and complex relationship management in SQL database.",
+        "Modern and reactive Frontend optimized with TailwindCSS and relational database integration."
+      ]
     },
     "minimax": {
-      "desc": "Competitive autonomous agents (Tic-Tac-Toe 5x5). Comparative analysis between standard Minimax and Alpha-Beta Pruning with exponential node reduction."
+      "desc": [
+        "Implementation of competitive autonomous agents for zero-sum games (5x5 Tic-Tac-Toe).",
+        "Comparative performance analysis between standard Minimax and Alpha-Beta Pruning.",
+        "Algorithmic optimization resulting in exponential reduction of visited nodes and decision time."
+      ]
     },
     "networks": {
-      "desc": "Mapping of streaming collaborations (+80k entities). Manual implementation of graph algorithms (MST, Centrality) focused on performance."
+      "desc": [
+        "Mapping of streaming collaborations with a dataset of +80k entities.",
+        "Manual implementation of data structures and graph algorithms (MST, Centrality) without external libraries.",
+        "Focus on performance optimization for processing large data volumes."
+      ]
     }
   },
   "skills": {

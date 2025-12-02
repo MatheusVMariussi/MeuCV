@@ -29,25 +29,55 @@
   "projects": {
     "title": "Meus Projetos",
     "ocean": {
-      "desc": "Ecossistema Full-stack (Mobile & Web) para gestão de bares publicado na App Store. App Mobile com Expo Router, Reanimated e Context API. Backend Serverless com Firebase Cloud Functions."
+      "desc": [
+        "Ecossistema Full-stack (Mobile & Web) para gestão de bares publicado na App Store.",
+        "App Mobile desenvolvido com Expo 54 e Expo Router, utilizando Reanimated para animações fluidas (60fps) e Context API.",
+        "Backend Serverless robusto com Firebase Cloud Functions orquestrando pagamentos seguros (Pix/Cartão) via Pagar.me.",
+        "Funcionalidades avançadas: Leitura de QR Code nativa, persistência de tema e sincronização em tempo real via Firestore.",
+        "Painel Administrativo Web (React + Vite) para gestão completa de cardápios e monitoramento de pedidos."
+      ]
     },
     "mcp": {
-      "desc": "Assistente inteligente 'Local-First' controlado por voz. Arquitetura ReAct com LangChain e Ollama para interpretar comandos e manipular planilhas."
+      "desc": [
+        "Assistente inteligente 'Local-First' controlado por voz para automação de tarefas complexas.",
+        "Arquitetura de Agentes ReAct com LangChain e Ollama (Mistral) para interpretar comandos de voz e manipular planilhas.",
+        "Persistência de dados customizada e automação de envio de listas formatadas diretamente para o WhatsApp."
+      ]
     },
     "fer": {
-      "desc": "Framework modular para treinamento de modelos de Reconhecimento de Emoções Faciais. Suporte a múltiplos datasets e backbones (ResNet, DenseNet)."
+      "desc": [
+        "Framework modular de Deep Learning para treinar e avaliar modelos de Reconhecimento de Emoções Faciais (FER).",
+        "Arquitetura flexível suportando múltiplos datasets (FER2013, RAF-DB, ExpW) e backbones (ResNet50, DenseNet, EfficientNet).",
+        "Implementação de pipelines avançados: Test-Time Augmentation (TTA) e análise estatística automática de erros."
+      ]
     },
     "genetic": {
-      "desc": "Algoritmo Genético 'from scratch' para Feature Selection. Mutação Adaptativa e Elitismo para maximizar acurácia (93.86% com redução de 80% nas features)."
+      "desc": [
+        "Implementação 'from scratch' de um Algoritmo Genético (GA) para otimização de seleção de atributos no dataset Breast Cancer.",
+        "Estratégias de Mutação Adaptativa e Elitismo para maximizar a acurácia de classificadores KNN.",
+        "Resultado: Acurácia de 93.86% utilizando apenas 6 features (redução de 80% na dimensionalidade), superando o baseline."
+      ]
     },
     "skins": {
-      "desc": "Plataforma Full-stack para comércio de ativos digitais (Skins CS2). Backend RESTful em Node.js com autenticação JWT e modelagem SQL complexa."
+      "desc": [
+        "Plataforma Full-stack robusta para comércio de ativos digitais (Skins CS2), desenvolvida com arquitetura MVC.",
+        "Backend RESTful em Node.js/Express com autenticação JWT e gestão complexa de relacionamentos em banco SQL.",
+        "Frontend moderno e reativo otimizado com TailwindCSS e integração com banco relacional."
+      ]
     },
     "minimax": {
-      "desc": "Agentes autônomos competitivos (Tic-Tac-Toe 5x5). Análise comparativa entre Minimax padrão e Poda Alfa-Beta com redução exponencial de nós."
+      "desc": [
+        "Implementação de agentes autônomos competitivos para jogos de soma zero (Tic-Tac-Toe 5x5).",
+        "Análise comparativa de performance entre Minimax padrão e Poda Alfa-Beta (Alpha-Beta Pruning).",
+        "Otimização algorítmica resultando em redução exponencial de nós visitados e tempo de decisão."
+      ]
     },
     "networks": {
-      "desc": "Mapeamento de colaborações em streaming (+80 mil entidades). Implementação manual de algoritmos de grafos (MST, Centralidade) focada em performance."
+      "desc": [
+        "Mapeamento de colaborações em streaming com dataset de +80 mil entidades.",
+        "Implementação manual de estruturas de dados e algoritmos de grafos (MST, Centralidade) sem dependência de bibliotecas externas.",
+        "Foco em otimização de performance para processamento de grandes volumes de dados."
+      ]
     }
   },
   "skills": {
