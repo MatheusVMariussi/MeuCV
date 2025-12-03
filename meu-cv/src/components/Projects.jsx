@@ -42,6 +42,7 @@ const Projects = () => {
       title: "MinhasSkins Marketplace",
       description: t('projects.skins.desc', { returnObjects: true }),
       github: "https://github.com/MatheusVMariussi/Cs2-SKINS",
+      demo: "https://cs2-skins-matheusvmariussis-projects.vercel.app/",
       image: skins
     },
     {
