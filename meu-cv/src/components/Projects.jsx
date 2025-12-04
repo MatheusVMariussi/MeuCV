@@ -85,6 +85,7 @@ const Projects = () => {
             github={item.github}
             appStore={item.appStore}
             googlePlay={item.googlePlay}
+            demo={item.demo}
             className={i === 0 || i === 2 ? "md:col-span-2" : ""}
           />
         ))}
