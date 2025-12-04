@@ -58,11 +58,11 @@
         "Resultado: Acurácia de 93.86% utilizando apenas 6 features (redução de 80% na dimensionalidade), superando o baseline."
       ]
     },
-    "skins": {
+"skins": {
       "desc": [
-        "Plataforma Full-stack robusta para comércio de ativos digitais (Skins CS2), desenvolvida com arquitetura MVC.",
-        "Backend RESTful em Node.js/Express com autenticação JWT e gestão complexa de relacionamentos em banco SQL.",
-        "Frontend moderno e reativo otimizado com TailwindCSS e integração com banco relacional."
+        "Arquitetura Monorepo moderna combinando Frontend de alta performance (React 18 + Vite) e Backend Serverless (Node.js/Express).",
+        "Integração robusta com Supabase para Banco de Dados PostgreSQL e Autenticação segura com Row Level Security (RLS).",
+        "Interface responsiva com Tailwind CSS e deploy unificado na Vercel."
       ]
     },
     "minimax": {

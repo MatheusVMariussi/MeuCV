@@ -60,9 +60,9 @@
     },
     "skins": {
       "desc": [
-        "Robust Full-stack platform for trading digital assets (CS2 Skins), developed with MVC architecture.",
-        "RESTful Backend in Node.js/Express with JWT authentication and complex relationship management in SQL database.",
-        "Modern and reactive Frontend optimized with TailwindCSS and relational database integration."
+        "Modern Monorepo architecture combining high-performance Frontend (React 18 + Vite) and Serverless Backend (Node.js/Express).",
+        "Robust integration with Supabase for PostgreSQL Database and secure Authentication with Row Level Security (RLS).",
+        "Responsive interface with Tailwind CSS and unified deployment on Vercel."
       ]
     },
     "minimax": {
