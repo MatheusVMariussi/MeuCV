@@ -36,10 +36,10 @@ const EveryScoreboard = () => {
             Se você encontrou algum bug, tem sugestões de melhoria ou precisa de ajuda com o aplicativo, entre em contato diretamente conosco.
           </p>
           <a 
-            href="mailto:contato@matheusmariussi.com.br" 
+            href="mailto:imath.mariussi@gmail.com" 
             className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold transition-colors"
           >
-            ✉️ contato@matheusmariussi.com.br
+            ✉️ imath.mariussi@gmail.com
           </a>
         </section>
 
