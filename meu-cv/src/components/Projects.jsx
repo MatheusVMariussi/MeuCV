@@ -43,7 +43,7 @@ const Projects = () => {
       description: t('projects.skins.desc', { returnObjects: true }),
       github: "https://github.com/MatheusVMariussi/Cs2-SKINS",
       demo: "https://cs2-skins-nine.vercel.app", 
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1470&auto=format&fit=crop"
+      image: skins
     },
     {
       title: "IA Invencível (Game Theory)",

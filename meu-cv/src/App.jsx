@@ -1,24 +1,25 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+// src/App.jsx
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './components/Home'
+import EveryScoreboard from './projectPages/everyscoreboard'
 
 function App() {
   return (
-    <main className="bg-black min-h-screen text-white w-full overflow-x-hidden selection:bg-blue-500/30">
-      <Navbar />
-      <Hero />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
-    </main>
-  );
+    <div className="min-h-screen bg-neutral-950 antialiased selection:bg-cyan-300 selection:text-cyan-900">
+       <div className="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+       
+       <Router>
+         <Routes>
+           {/* Rota Principal (Seu Portfólio) */}
+           <Route path="/" element={<Home />} />
+           
+           {/* Nova Rota (Every Scoreboard) */}
+           <Route path="/every-scoreboard" element={<EveryScoreboard />} />
+         </Routes>
+       </Router>
+    </div>
+  )
 }
 
-export default App;
+export default App
