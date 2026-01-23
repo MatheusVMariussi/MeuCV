@@ -78,6 +78,13 @@
         "Implementação manual de estruturas de dados e algoritmos de grafos (MST, Centralidade) sem dependência de bibliotecas externas.",
         "Foco em otimização de performance para processamento de grandes volumes de dados."
       ]
+    },
+    "scoreboard": {
+      "desc": [
+        "Aplicativo mobile versátil desenvolvido com React Native e Expo para contagem de pontos em jogos de cartas.",
+        "Interface moderna com suporte a temas (Claro/Escuro), animações fluidas com Reanimated e gráficos Skia.",
+        "Arquitetura Offline-first com persistência de dados automática e internacionalização (PT/EN)."
+      ]
     }
   },
   "skills": {

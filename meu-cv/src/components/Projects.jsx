@@ -8,7 +8,8 @@ import fer from "../assets/tcc-fer.png";
 import tictactoe from "../assets/tictactoe.png";
 import genetic from "../assets/genetic-algorithm.png";
 import skins from "../assets/minhasskins.png";
-import networks from "../assets/complex-networks.png";
+//import networks from "../assets/complex-networks.png";
+import everyScoreboard from "../assets/everyscoreboard.png";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -21,10 +22,12 @@ const Projects = () => {
       image: ocean
     },
     {
-      title: "Assistente de Voz (MCP Agent)",
-      description: t('projects.mcp.desc', { returnObjects: true }),
-      github: "https://github.com/MatheusVMariussi/mcp-voice-agent",
-      image: mcp
+      title: "Every Scoreboard",
+      description: t('projects.scoreboard.desc', { returnObjects: true }),
+      appStore: "https://apps.apple.com/us/app/every-scoreboard/id6758025911", 
+      googlePlay: "LINK_DA_GOOGLE_PLAY_AQUI",
+      github: "https://github.com/MatheusVMariussi/every-scoreboard",
+      image: everyScoreboard
     },
     {
       title: "Framework FER",
@@ -51,12 +54,18 @@ const Projects = () => {
       github: "https://github.com/MatheusVMariussi/TDE2-Minimax-AlphaBeta",
       image: tictactoe
     },
+    // {
+    //   title: "Análise de Redes Complexas",
+    //   description: t('projects.networks.desc', { returnObjects: true }),
+    //   github: "https://github.com/MatheusVMariussi/TDE_Actuators",
+    //   image: networks
+    // },
     {
-      title: "Análise de Redes Complexas",
-      description: t('projects.networks.desc', { returnObjects: true }),
-      github: "https://github.com/MatheusVMariussi/TDE_Actuators",
-      image: networks
-    }
+      title: "Assistente de Voz (MCP Agent)",
+      description: t('projects.mcp.desc', { returnObjects: true }),
+      github: "https://github.com/MatheusVMariussi/mcp-voice-agent",
+      image: mcp
+    },
   ];
 
   return (

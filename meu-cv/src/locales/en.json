@@ -78,6 +78,13 @@
         "Manual implementation of data structures and graph algorithms (MST, Centrality) without external libraries.",
         "Focus on performance optimization for processing large data volumes."
       ]
+    },
+    "scoreboard": {
+      "desc": [
+        "Versatile mobile app built with React Native and Expo for card game scoring.",
+        "Modern interface with Theme support (Light/Dark), fluid Reanimated animations, and Skia graphics.",
+        "Offline-first architecture with automatic data persistence and internationalization (PT/EN)."
+      ]
     }
   },
   "skills": {
